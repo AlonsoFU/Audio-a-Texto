@@ -2,9 +2,11 @@ import speech_recognition as sr
 import Separador_Audio as Sep
 
 
-# Cargar el archivo de audio (asegúrate de que el archivo de audio esté en el mismo directorio)
+# Carga del archivo de audio 
 folder=r"C:\Github Audio a Texto\__pycache__\Audios\\"
 file="Recording_43.wav"
+
+# Uso de librería separador de audio
 split_wav = Sep.SplitWavAudioMubin(folder, file)
 num_archivos=split_wav.multiple_split(min_per_split=5)
 print("Cantidad de Archivos Generados:", num_archivos)
