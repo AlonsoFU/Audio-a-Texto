@@ -24,8 +24,8 @@ class SplitWavAudioMubin():
         for i in range(0, total_mins, min_per_split):
             split_fn = str(self.generated_files) + '_' + self.filename
             self.single_split(i, i+min_per_split, split_fn)
-            self.generated_files += 1  # Increment the counter
+            self.generated_files += 1  # Aumentar el contador
             print(str(i) + ' Done')
             if i == total_mins - min_per_split:
                 print('All splited successfully')
-        return self.generated_files # Return the total number of generated files
+        return self.generated_files # retornan el total de archivos generados
