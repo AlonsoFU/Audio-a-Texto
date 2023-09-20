@@ -4,7 +4,7 @@ import Separador_Audio as Sep
 
 # Carga del archivo de audio 
 folder=r"C:\Github Audio a Texto\__pycache__\Audios\\"
-file="Recording_43.wav"
+file="Recording_96.wav"
 
 # Uso de librería separador de audio
 split_wav = Sep.SplitWavAudioMubin(folder, file)
@@ -16,9 +16,9 @@ print("Cantidad de Archivos Generados:", num_archivos)
 lista = list(range(num_archivos))
 
 for i in lista:
- print("Número Archivo",i)
+ #print("Número Archivo",i)
  r = sr.Recognizer()
- filename = rf"C:\Github Audio a Texto\__pycache__\Audios\{i}_Recording_43.wav"
+ filename = rf"C:\Github Audio a Texto\__pycache__\Audios\{i}_{file}"
  # Abrir el archivo de audio usando SpeechRecognition
  with sr.AudioFile(filename) as source:
      audio_data = r.record(source)  # Leer el audio
@@ -26,7 +26,7 @@ for i in lista:
      # Utilizar el reconocimiento de voz en español
      try:
          text = r.recognize_google(audio_data, language="es-ES")
-         print("Texto transcribido en español: " + text)
+         print(text)
      except sr.UnknownValueError:
          print("No se pudo reconocer el audio.")
      except sr.RequestError as e:
