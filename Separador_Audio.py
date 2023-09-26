@@ -1,6 +1,7 @@
 from pydub import AudioSegment
 import math
 
+# Código para Dividir el Audio
 class SplitWavAudioMubin():
     def __init__(self, folder, filename):
         self.folder = folder

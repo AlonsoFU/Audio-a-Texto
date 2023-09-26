@@ -11,7 +11,7 @@ split_wav = Sep.SplitWavAudioMubin(folder, file)
 num_archivos=split_wav.multiple_split(min_per_split=5)
 print("Cantidad de Archivos Generados:", num_archivos)
 
-# initialize the recognizer
+# Inicializar el reconocedor de voz
 
 lista = list(range(num_archivos))
 
